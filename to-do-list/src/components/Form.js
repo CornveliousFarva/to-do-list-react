@@ -7,6 +7,9 @@ function Form () {
           <button className="todo-button" type="submit">
               <i className="fas fa-plus-square"></i>
           </button>
+          <label for="date"> Date:</label>
+          <input type="date" id="date" name="date" />
+          <input type="submit" />
           <div className="select">
               <select name="todo-items" className="filter-todo">
                   <option value="all">All</option>
