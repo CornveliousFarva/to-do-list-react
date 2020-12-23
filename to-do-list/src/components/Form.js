@@ -1,13 +1,17 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-const Form = ({ setInputText }) => {
+const Form = ({ setInputText, todos, setTodos }) => {
     const inputTextHandler = (e) => {
         console.log(e.target.value)
         setInputText(e.target.value)
     }
     const submitTodoHandler = (e) => {
         e.preventDefault()
+        setTodos([
+            ...todos, 
+                {text: inputText, completed: false, id: Math.random () * 1000}
+        ])
     }
     return(
         <Container fluid>
