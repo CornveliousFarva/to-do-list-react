@@ -1,7 +1,10 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-function Form () {
+const Form = () => {
+    const inputTextHandler = (e) => {
+        console.log(e)
+    }
     return(
         <Container fluid>
           <form>
