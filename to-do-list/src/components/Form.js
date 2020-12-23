@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const Form = ({ setInputText, todos, setTodos, inputText }) => {
     const inputTextHandler = (e) => {
@@ -16,8 +16,10 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
     }
     return(
         <Container fluid>
-          <form>
-            <input onChange = {inputTextHandler} type = "text" className="todo-input" />
+            <Row>
+                <Col>
+                 <form>
+                    <input onChange = {inputTextHandler} type = "text" className="todo-input" />
                 {/* <label for="date"> Date:</label>
                 <input type="date" id="date" name="date" />
                 <input type="submit" />  */}
@@ -39,6 +41,9 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
               </select>
           </div> */}
         </form>  
+                </Col>
+            </Row>
+         
         </Container>
     )
 }
