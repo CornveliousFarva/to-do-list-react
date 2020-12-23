@@ -7,10 +7,9 @@ const List = ({ todos }) => {
       <div className="todo-container">
         <ul className="todo-list">
           {todos.map(todo => (
-            <Todo />
+            <Todo text={todo.text} />
           ))}
         </ul>
-          <Todo />
     </div>  
     )
 }
