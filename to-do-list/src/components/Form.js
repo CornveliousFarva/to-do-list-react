@@ -6,6 +6,9 @@ const Form = ({ setInputText }) => {
         console.log(e.target.value)
         setInputText(e.target.value)
     }
+    const submitTodoHandler = (e) => {
+        e.preventDefault()
+    }
     return(
         <Container fluid>
           <form>
@@ -13,7 +16,7 @@ const Form = ({ setInputText }) => {
                 <label for="date"> Date:</label>
                 <input type="date" id="date" name="date" />
                 <input type="submit" /> 
-            <button className="todo-button" type="submit">
+            <button onClick = {submitTodoHandler} className="todo-button" type="submit">
               <i className="fas fa-plus-square"></i>
             </button>
           <div className="select">
