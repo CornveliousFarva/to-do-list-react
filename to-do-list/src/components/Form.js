@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 
-const Form = ({ setInputText, todos, setTodos }) => {
+const Form = ({ setInputText, todos, setTodos, inputText }) => {
     const inputTextHandler = (e) => {
         console.log(e.target.value)
         setInputText(e.target.value)
@@ -12,14 +12,15 @@ const Form = ({ setInputText, todos, setTodos }) => {
             ...todos, 
                 {text: inputText, completed: false, id: Math.random () * 1000}
         ])
+        setInputText('')
     }
     return(
         <Container fluid>
           <form>
             <input onChange = {inputTextHandler} type = "text" className="todo-input" />
-                <label for="date"> Date:</label>
+                {/* <label for="date"> Date:</label>
                 <input type="date" id="date" name="date" />
-                <input type="submit" /> 
+                <input type="submit" />  */}
             <button onClick = {submitTodoHandler} className="todo-button" type="submit">
               <i className="fas fa-plus-square"></i>
             </button>
@@ -30,6 +31,13 @@ const Form = ({ setInputText, todos, setTodos }) => {
                   <option value="Incomplete">Incomplete</option>
               </select>
           </div>
+          {/* <div className="importance">
+              <select name="todo-importance" className="filter-importance">
+                  <option value="very">Very Important</option>
+                  <option value="somewhat">Somewhat Important</option>
+                  <option value="low">Not Important</option>
+              </select>
+          </div> */}
         </form>  
         </Container>
     )
