@@ -19,7 +19,10 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
             <Row>
                 <Col>
                  <form>
-                    <input onChange = {inputTextHandler} type = "text" className="todo-input" />
+                    <input value = {inputText}
+                            onChange = {inputTextHandler} 
+                            type = "text" 
+                            className="todo-input" />
                 {/* <label for="date"> Date:</label>
                 <input type="date" id="date" name="date" />
                 <input type="submit" />  */}
