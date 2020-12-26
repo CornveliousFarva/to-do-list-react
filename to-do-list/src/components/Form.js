@@ -14,6 +14,9 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
         ])
         setInputText('')
     }
+    const statusHandler = (e) => {
+        console.log(e.target.value)
+    }
     return(
         <Container fluid>
             <Row>
@@ -30,7 +33,7 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
               <i className="fas fa-plus-square"></i>
             </button>
           <div className="select">
-              <select name="todo-items" className="filter-todo">
+              <select onChange={statusHandler} name="todo-items" className="filter-todo">
                   <option value="all">All</option>
                   <option value="Complete">Complete</option>
                   <option value="Incomplete">Incomplete</option>
