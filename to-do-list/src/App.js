@@ -16,7 +16,7 @@ function App() {
     getLocalTodos()
   }, [])
 
-// Use Effect
+// Use Effect for filterHandler
 useEffect(() => {
   const filterHandler = () => {
     switch(status){
@@ -38,17 +38,14 @@ useEffect(() => {
 
 // Save to local storage
   const saveLocalTodos = () => {
-    if(localStorage.getItem('todos') === null){
       localStorage.setItem('todos', JSON.stringify([]))
-    }else{
-      localStorage.setItem('todos', JSON.stringify('todos'))
-    }
   }
   const getLocalTodos = () => {
     if(localStorage.getItem('todos') === null){
       localStorage.setItem('todos', JSON.stringify([]))
     }else{
-      localStorage.setItem('todos', JSON.stringify('todos'))
+      let todoFromLocal = JSON.parse(localStorage.getItem('todos'))
+      setTodos(todoFromLocal)
     }
   }
   return (
