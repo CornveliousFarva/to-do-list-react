@@ -28,8 +28,8 @@ useEffect(() => {
       default:
         setFilteredTodos(todos);
         break
-    }
-  }
+    };
+  };
   return (
     <div className="App">
       <header>
@@ -44,7 +44,9 @@ useEffect(() => {
             />
       <List 
             setTodos = {setTodos}
-            todos = {todos}/>
+            todos = {todos}
+            filteredTodos={filteredTodos}
+            />
     </div>
   );
 }
