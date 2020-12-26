@@ -13,10 +13,6 @@ function App() {
 
 // Use Effect
 useEffect(() => {
-  filterHandler()
-}, [todos, status])
-
-  // Functions
   const filterHandler = () => {
     switch(status){
       case 'complete':
@@ -30,6 +26,11 @@ useEffect(() => {
         break
     };
   };
+
+  filterHandler()
+}, [todos, status])
+
+  
   return (
     <div className="App">
       <header>
