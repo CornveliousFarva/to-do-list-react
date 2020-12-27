@@ -47,8 +47,8 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
               </select>
           </div> */}
         </form>  
-                </Col>
-            </Row>
+    </Col>
+</Row>
          
         </Container>
     )

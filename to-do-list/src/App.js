@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Form from './components/Form'
 import List from './components/List'
 import './App.css';
+import { Container, Row, Col } from 'react-bootstrap'
 
 function App() {
   
@@ -49,7 +50,10 @@ useEffect(() => {
     }
   }
   return (
-    <div className="App">
+    <Container fluid>
+      <Row>
+        <Col>
+        <div className="App">
       <header>
         <h1> To-Do List </h1>
       </header>
@@ -66,6 +70,10 @@ useEffect(() => {
             filteredTodos={filteredTodos}
             />
     </div>
+        </Col>
+      </Row>
+    </Container>
+    
   );
 }
 
