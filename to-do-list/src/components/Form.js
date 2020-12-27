@@ -32,13 +32,18 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
             <button onClick = {submitTodoHandler} className="todo-button" type="submit">
               <i className="fas fa-plus-square"></i>
             </button>
-          <div className="select">
-              <select onChange={statusHandler} name="todo-items" className="filter-todo">
-                  <option value="all">All</option>
-                  <option value="Complete">Complete</option>
-                  <option value="Incomplete">Incomplete</option>
-              </select>
-          </div>
+        <Row>
+            <Col>
+                <div className="select">
+                <select onChange={statusHandler} name="todo-items" className="filter-todo">
+                    <option value="all">All</option>
+                    <option value="Complete">Complete</option>
+                    <option value="Incomplete">Incomplete</option>
+                </select>
+            </div>
+            </Col>
+        </Row>
+          
           {/* <div className="importance">
               <select name="todo-importance" className="filter-importance">
                   <option value="very">Very Important</option>
